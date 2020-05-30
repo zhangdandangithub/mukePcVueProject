@@ -1,15 +1,15 @@
 <template>
   <div>
-    order-confirm
+    order-footer
   </div>
 </template>
 
 <script>
   export default {
-    name: 'order-confirm'
+    name: "order-footer"
   }
 </script>
 
-<style>
+<style lang="less" scoped>
 
 </style>
