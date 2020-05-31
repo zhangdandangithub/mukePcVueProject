@@ -6,7 +6,7 @@ switch (process.env.NODE_ENV) { // nodeJS里面有一个进程叫process，proce
   case 'test': // 测试
     baseURL = 'http://test-mall-pre.springboot.cn/api';
     break;
-  case 'prev': // 预发布环境，如果要加这样的环境配置，要新建一个'.env'为前缀的文件'.env.prev'后面的'.prev'要和case后面的值匹配
+  case 'prev': // 预发布环境，如果要加这样的环境配置，要新建一个'.env'为前缀的文件'.env.prev'后面的'.prev'要和case后面的值匹配，该文件内的内容是：NODE_ENV='prev'即可
     baseURL = 'http://prev-mall-pre.springboot.cn/api';
     break;
   case 'prod': // 线上

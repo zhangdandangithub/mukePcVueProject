@@ -5,7 +5,6 @@
 </template>
 
 <script>
-// import storage from './storage';
 export default {
   name: 'app',
   components: {
@@ -13,15 +12,18 @@ export default {
   },
   data () {
     return {
-
+      res: {}
     }
   },
   mounted () {
-    // console.log(storage);
-    // storage.setItem('a', 1);
-    // storage.setItem('user', {a:1});
-    // storage.setItem('abc', 1, {a:1}, 'user');
-    // storage.clear
+    // 本地家在请求静态json文件的形式
+    this.axios.get('/mock/user/login.json').then((res) => {
+      this.res = res.data;
+    });
+    // // 通过easy-mock平台实现数据mock
+    // this.axios.get('/mock/user/login.json').then((res) => {
+    //   this.res = res.data;
+    // });
   }
 }
 </script>

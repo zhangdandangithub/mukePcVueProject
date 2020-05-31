@@ -6,7 +6,7 @@ import store from './store'
 import axios from 'axios';
 import VueAxios from 'vue-axios'; // 像这样npm install的插件不需要加’./‘这样的具体路径，因为是直接去node-modules里面找的
 
-import env from './env' // 自己定义的文件在引入的时候要加’./‘这样的具体路径，否则会报错：This dependency was not found找不到这个依赖
+// import env from './env' // 自己定义的文件在引入的时候要加’./‘这样的具体路径，否则会报错：This dependency was not found找不到这个依赖
 // 接口规范
 // {
 //    status: **, // 状态码
@@ -14,9 +14,9 @@ import env from './env' // 自己定义的文件在引入的时候要加’./‘
 //    msg: ** // 错误信息
 // }
 // 设置基础值  根据前端的跨域方式做调整
-axios.defaults.baseURL = '/api'; // 代理
+// axios.defaults.baseURL = '/api'; // 代理
 // 根据环境变量获取不同的请求地址
-axios.defaults.baseURL = env.baseURL; // cors/jsonp
+// axios.defaults.baseURL = env.baseURL; // cors/jsonp
 axios.defaults.timeout = 8000;
 // 接口错误拦截
 axios.interceptors.response.use(function (response) {
