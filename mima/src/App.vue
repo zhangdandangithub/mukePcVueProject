@@ -4,6 +4,28 @@
   </div>
 </template>
 
+<script>
+// import storage from './storage';
+export default {
+  name: 'app',
+  components: {
+
+  },
+  data () {
+    return {
+
+    }
+  },
+  mounted () {
+    // console.log(storage);
+    // storage.setItem('a', 1);
+    // storage.setItem('user', {a:1});
+    // storage.setItem('abc', 1, {a:1}, 'user');
+    // storage.clear
+  }
+}
+</script>
+
 <style lang="less">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
