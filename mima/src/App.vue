@@ -17,13 +17,17 @@ export default {
   },
   mounted () {
     // 本地家在请求静态json文件的形式
-    this.axios.get('/mock/user/login.json').then((res) => {
-      this.res = res.data;
-    });
-    // // 通过easy-mock平台实现数据mock
     // this.axios.get('/mock/user/login.json').then((res) => {
     //   this.res = res.data;
     // });
+    // // 通过easy-mock平台实现数据mock
+    this.axios.get('/user/login').then((res) => {
+      this.res = res;
+    });
+    // 本地集成mockjs实现数据mock
+      // this.axios.get('/user/login').then((res) => {
+      //   this.res = res;
+      // });
   }
 }
 </script>

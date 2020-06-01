@@ -13,7 +13,17 @@ import VueAxios from 'vue-axios'; // 像这样npm install的插件不需要加�
 //    data: **, // 返回值
 //    msg: ** // 错误信息
 // }
+
+// mock开关 
+  // import是在编译阶段就加载了，而require不是，require可以写在语句里面，执行的时候才会加载
+const mock = true;
+if (mock) {
+  require("./mock/api")
+}
+
 // 设置基础值  根据前端的跨域方式做调整
+// 当用easy-mock平台来mock数据的时候把baseURL换成easy-mock平台生成的base URL地址: https://www.easy-mock.com/mock/5ed3f26bc20d550e4408add5/mimall
+axios.defaults.baseURL = 'https://www.easy-mock.com/mock/5ed3f26bc20d550e4408add5/mimall';
 // axios.defaults.baseURL = '/api'; // 代理
 // 根据环境变量获取不同的请求地址
 // axios.defaults.baseURL = env.baseURL; // cors/jsonp
